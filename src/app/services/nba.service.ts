@@ -14,11 +14,11 @@ export class NbaService {
   ) { }
 
   handleError(e) {
-    return Observable.throw(e.json().message);
+    return Observable.throw(e.message);
   }
 
   getList() {
-    return this.http.get(`${this.BASE_URL}/?PerMode=Totals&LeagueID=00&Season=2016-17&SeasonType=Regular Season`)
+    return this.http.get(`${this.BASE_URL}/leaguedashplayerbiostats?PerMode=Totals&LeagueID=00&Season=2016-17&SeasonType=Regular Season`)
       .map((res) => res.json())
       .catch(this.handleError);
   }

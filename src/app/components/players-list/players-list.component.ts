@@ -18,8 +18,8 @@ export class PlayersListComponent implements OnInit {
   ngOnInit() {
     this.nbaService.getList()
       .subscribe((players) => {
-        console.log(players);
-        this.players = players;
+        console.log(players.resultSets[0].rowSet);
+        this.players = players.resultSets[0].rowSet;
       });
   }
 
