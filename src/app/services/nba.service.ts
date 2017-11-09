@@ -18,7 +18,7 @@ export class NbaService {
   }
 
   getList() {
-    return this.http.get(`${this.BASE_URL}/leaguedashplayerbiostats`)
+    return this.http.get(`${this.BASE_URL}/?PerMode=Totals&LeagueID=00&Season=2016-17&SeasonType=Regular Season`)
       .map((res) => res.json())
       .catch(this.handleError);
   }
