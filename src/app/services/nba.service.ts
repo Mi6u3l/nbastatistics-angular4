@@ -22,4 +22,10 @@ export class NbaService {
       .map((res) => res.json())
       .catch(this.handleError);
   }
+
+   get(id) {
+    return this.http.get(`${this.BASE_URL}/commonplayerinfo?PlayerID=${id}`)
+      .map((res) => res.json())
+      .catch(this.handleError);
+  }
 }

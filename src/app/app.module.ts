@@ -10,12 +10,14 @@ import { NbaService } from './services/nba.service';
 
 import { AppComponent } from './app.component';
 import { PlayersListComponent } from './components/players-list/players-list.component';
+import { PlayersDetailsComponent } from './components/players-details/players-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlayersListComponent
+    PlayersListComponent,
+    PlayersDetailsComponent
   ],
   imports: [
     BrowserModule,
